@@ -1,1 +1,121 @@
-/* Add styles here */
+body {
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#lotto-sets-container {
+    margin: 30px 0;
+    display: grid;
+    gap: 20px;
+}
+
+.lotto-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.number-container {
+    display: flex;
+    gap: 5px;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.bonus-container {
+    text-align: center;
+    margin-left: 15px;
+}
+
+#generate-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.light-mode .container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .lotto-set {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.light-mode .number {
+    background-color: #eee;
+    color: #333;
+}
+
+.light-mode .bonus {
+    background-color: #ffdddd;
+}
+
+.light-mode #generate-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .lotto-set {
+    background-color: #555;
+    border: 1px solid #666;
+}
+
+.dark-mode .number {
+    background-color: #666;
+    color: #f0f0f0;
+}
+
+.dark-mode .bonus {
+    background-color: #8B0000;
+}
+
+.dark-mode #generate-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
