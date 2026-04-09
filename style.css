@@ -1,34 +1,81 @@
+/* General Styles */
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
     transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
+    width: 100%;
     max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #444;
+    margin: 0;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+#theme-switch {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#generate-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#generate-btn:hover {
+    background-color: #0056b3;
 }
 
 #lotto-sets-container {
-    margin: 30px 0;
     display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
 .lotto-set {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
     padding: 15px;
+    border: 1px solid #eee;
     border-radius: 8px;
 }
 
 .number-container {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .number {
@@ -36,97 +83,41 @@ body {
     height: 40px;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 18px;
+    justify-content: center;
     font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    color: #000; /* 글자색을 검은색으로 변경 */
 }
-
-.range-1-10 { background-color: #fbc400; }
-.range-11-20 { background-color: #69c8f2; }
-.range-21-30 { background-color: #ff7272; }
-.range-31-40 { background-color: #aaaaaa; }
-.range-41-45 { background-color: #b0d840; }
 
 .bonus-container {
     text-align: center;
-    margin-left: 15px;
-    padding-left: 15px;
-    border-left: 2px dashed #ccc;
 }
 
-#generate-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Light Mode */
-body.light-mode {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-.light-mode .container {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.light-mode .lotto-set {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-}
-
-.light-mode .number {
-    background-color: #eee;
-    color: #333;
-}
-
-.light-mode .bonus {
-    background-color: #ffdddd;
-}
-
-.light-mode #generate-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
     background-color: #333;
-    color: #f0f0f0;
+    color: #f0f2f5;
 }
 
-.dark-mode .container {
+body.dark-mode .container {
     background-color: #444;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
 }
 
-.dark-mode .lotto-set {
-    background-color: #555;
-    border: 1px solid #666;
+body.dark-mode h1,
+body.dark-mode .lotto-set {
+    color: #f0f2f5;
+    border-color: #555;
 }
 
-.dark-mode .number {
-    background-color: #666;
-    color: #f0f0f0;
+body.dark-mode .number {
+    color: #fff; /* 다크 모드에서는 글자색을 흰색으로 변경 */
 }
 
-.dark-mode .bonus {
-    background-color: #8B0000;
-}
-
-.dark-mode #generate-btn {
-    background-color: #5cb85c;
-    color: white;
-}
-
-.theme-switcher {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+/* Number Color Styles */
+.range-1-10 { background-color: #f2b50c; }
+.range-11-20 { background-color: #3498db; }
+.range-21-30 { background-color: #e74c3c; }
+.range-31-40 { background-color: #9b59b6; }
+.range-41-45 { background-color: #2ecc71; }
