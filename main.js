@@ -28,18 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNumbers.forEach(num => {
                 const numberDiv = document.createElement('div');
                 numberDiv.classList.add('number');
+                numberDiv.classList.add(getNumberClass(num));
                 numberDiv.textContent = num;
                 numberContainer.appendChild(numberDiv);
             });
 
             const bonusContainer = document.createElement('div');
             bonusContainer.classList.add('bonus-container');
-            bonusContainer.innerHTML = `<p>Bonus</p><div class="number bonus">${bonusNumber}</div>`;
+            const bonusNumberDiv = document.createElement('div');
+            bonusNumberDiv.classList.add('number');
+            bonusNumberDiv.classList.add('bonus');
+            bonusNumberDiv.classList.add(getNumberClass(bonusNumber));
+            bonusNumberDiv.textContent = bonusNumber;
+            bonusContainer.innerHTML = `<p>Bonus</p>`;
+            bonusContainer.appendChild(bonusNumberDiv);
 
             setElement.appendChild(numberContainer);
             setElement.appendChild(bonusContainer);
             lottoSetsContainer.appendChild(setElement);
         }
+    }
+
+    function getNumberClass(num) {
+        if (num <= 10) return 'range-1-10';
+        if (num <= 20) return 'range-11-20';
+        if (num <= 30) return 'range-21-30';
+        if (num <= 40) return 'range-31-40';
+        return 'range-41-45';
     }
 
     function switchTheme() {
