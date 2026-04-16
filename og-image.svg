@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(230, 240, 255);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(230, 255, 240);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bgGradient)" />
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="280" font-size="100" font-weight="bold" fill="#333">
+      LottoLuck
+    </text>
+    <text x="600" y="380" font-size="50" fill="#555">
+      행운의 로또 번호 생성기
+    </text>
+  </g>
+  <!-- Decorative lotto ball shapes -->
+  <circle cx="150" cy="150" r="40" fill="rgba(255, 223, 186, 0.7)" />
+  <circle cx="1050" cy="480" r="60" fill="rgba(173, 216, 230, 0.7)" />
+  <circle cx="1000" cy="120" r="30" fill="rgba(200, 230, 201, 0.7)" />
+  <circle cx="200" cy="500" r="50" fill="rgba(255, 182, 193, 0.7)" />
+</svg>
